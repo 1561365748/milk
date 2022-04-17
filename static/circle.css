@@ -1,0 +1,108 @@
+.activity-list{
+    list-style-type: none;
+    color:#fffafa;
+    font-size:22px;
+    font-weight:1000;
+}
+.input{
+    word-wrap:break-word;
+    overflow: hidden;
+    width:1000px;
+    height: 120px;
+    word-break:break-all;
+    position:relative;
+    margin-left:20px ;
+    z-index:5
+}
+
+.buttonlike
+{
+    font-family:"幼圆";
+    font-size: 15px;
+    background: none;
+    text-align: center;
+    border: 3px solid  #ff99cc;
+    padding: 5px 20px;
+    outline: none;
+    color:#ff66cc;
+    border-radius: 20px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.inbutton{
+    position:relative;
+    margin-left:850px ;
+    z-index:5;
+    cursor: pointer;
+    width: 160px;
+    height: 37px;
+    padding: 20;
+    background: #ef4300;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #ef4300;
+    -moz-box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset,
+    0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 2px rgba(0,0,0,.1);
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+
+}
+
+.user{
+    font-family:"幼圆";
+    color:#0000cd;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.user1{
+    color:#808080;
+    font-size: 15px;
+    font-weight: 800;
+    font-family:"幼圆";
+}
+
+.like{
+    color:#4B0082;
+    font-size: 18px;
+    font-weight: 700;
+    font-family:"幼圆";
+}
+
+.saying{
+    color:#000;
+    font-size:22px;
+    font-weight:1000;
+    font-family:"幼圆";
+}
+.each{
+    width: 900px;
+    height: 140px;
+     background: linear-gradient(to bottom, #f0ffff, #ccffff);
+    background-origin: border-box;
+    background:linear-gradient(-135deg, #000,15px, 0);
+    font-size: 18px;
+    padding: 5px 15px;
+    box-shadow: 0 0 1px 1px #fff;
+    margin-bottom: 30px;
+    position: relative;
+    background-origin: border-box;
+    font-family:"幼圆";
+}
+
+.add{
+    color:#fffafa;
+    font-size:10px;
+    font-weight:1000;
+    font-family:"幼圆";
+}

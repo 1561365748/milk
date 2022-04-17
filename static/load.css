@@ -1,0 +1,43 @@
+.container
+{
+    width: 100%;
+    height: 900px;
+}
+.login {
+  width: 500px;
+  height: 400px;
+    margin: auto;
+}
+.group
+{
+   width: 330px;
+  height: 100px;
+  margin-top:20px;
+}
+.control
+{
+  width: 330px;
+  height: 50px;
+  margin-top:20px;
+}
+.btn-default
+{
+    margin-top:20px;
+     font-size: 120%;
+}
+.btn-primary{
+    margin-top:20px;
+     font-size: 120%;
+    margin-left: 20px;
+}
+.title{
+    margin-left: 600px;
+}
+
+.loader {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #d6d6d6;
+    background: url(http://www.pencilscoop.com/demos/CSS_Text_Effects/images/galaxy.jpg);
+    background-size: cover;
+}
+

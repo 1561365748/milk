@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>推荐</title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/static/css1/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css1/demo.css" />
+		<script>document.documentElement.className = 'js';</script>
+</head>
+<style>
+    .recommend{
+            margin-top:180px;
+            margin-left:660px;
+    }
+	.text1{
+		font-size: 2em;
+	}
+</style>
+<body>
+
+	<div class="container">
+		<div class="scroller">
+			<div class="text1">
+				<h1 align="center">{{like}}</h1></div>
+				<h1 align="center">{{like1}}</h1>
+			<div class="room room--current">
+				<div class="room__side room__side--back">
+					<img class="room__img" src="/static/img1/set4/3.jpg" alt="Some image"/>
+					<img class="room__img" src="/static/img1/set4/6.jpg" alt="Some image"/>
+				</div>
+				<div class="room__side room__side--left">
+					<img class="room__img" src="/static/img1/7.jpg" alt="Some image"/>
+					<img class="room__img" src="/static/img1//1.jpg" alt="Some image"/>
+					<img class="room__img" src="/static/img1/2.jpg" alt="Some image"/>
+				</div>
+				<div class="room__side room__side--right">
+					<img class="room__img" src="/static/img1/4.jpg" alt="Some image"/>
+					<img class="room__img" src="/static/img1/5.jpg" alt="Some image"/>
+					<img class="room__img" src="/static/img1/8.jpg" alt="Some image"/>
+				</div>
+				<div class="room__side room__side--bottom"></div>
+
+				<div class="recommend"><img src="/static/img/rec.jpg"/></div>
+			</div><!-- /room -->
+		</div>
+	</div><!-- /container -->
+	<script src="/static/js/anime.min.js"></script>
+	<script src="/static/js/main.js"></script>
+</body>
+</html>

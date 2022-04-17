@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>奶茶圈</title>
+		<link rel="stylesheet" href="/static/circle.css">
+	</head>
+	<!--&nbsp -->
+ <style>
+		 .activity-list{
+			list-style-type: none;
+			color:#fffafa;
+			font-size:22px;
+			font-weight:1000;
+		}
+		.input{
+			word-wrap:break-word;
+			overflow: hidden;
+			width:1000px;
+			height: 120px;
+			font-size: 17px;
+			color:#990000;
+			word-break:break-all;
+			position:relative;
+			margin-left:20px ;
+			z-index:5;
+			font-family:"幼圆";
+		}
+
+		.buttonlike
+		{
+			font-family:"幼圆";
+			font-size: 15px;
+			background: none;
+			text-align: center;
+			border: 3px solid  #ff99cc;
+			padding: 8px 20px;
+			outline: none;
+			color:#ff66cc;
+			border-radius: 20px;
+			transition: 0.25s;
+			cursor: pointer;
+		}
+		.inbutton{
+			position:relative;
+			margin-left:850px ;
+			z-index:5;
+			cursor: pointer;
+			width: 160px;
+			height: 37px;
+			padding: 20;
+			background: #ef4300;
+			-moz-border-radius: 6px;
+			-webkit-border-radius: 6px;
+			border-radius: 6px;
+			border: 1px solid #ef4300;
+			-moz-box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset,
+			0 2px 7px 0 rgba(0,0,0,.2);
+			-webkit-box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+			box-shadow: 0 15px 30px 0 rgba(255,255,255,.25) inset, 0 2px 7px 0 rgba(0,0,0,.2);
+			font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-shadow: 0 1px 2px rgba(0,0,0,.1);
+			-o-transition: all .2s;
+			-moz-transition: all .2s;
+			-webkit-transition: all .2s;
+			-ms-transition: all .2s;
+
+		}
+		.circle{
+			position: absolute;
+			margin-top: 100px;
+			margin-left: 350px;
+			width:1000px;
+			z-index:5
+		}
+
+		.user{
+			font-family:"幼圆";
+			color:#0000cd;
+			font-size: 20px;
+			font-weight: 800;
+		}
+
+		.user1{
+			color:#808080;
+			font-size: 16px;
+			font-weight: 800;
+		}
+
+		.like{
+			color:#4B0082;
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		.saying{
+			color:#000;
+			font-size:27px;
+			font-weight:1000;
+		}
+		.each{
+			width: 900px;
+			height: 140px;
+			background:linear-gradient(-135deg, #fff,15px, 0);
+			background: linear-gradient(to bottom, #f0ffff, #ccffff);
+			background-origin: border-box;
+
+			font-size: 18px;
+			padding: 5px 15px;
+			box-shadow: 0 0 1px 1px #fff;
+			margin-bottom: 30px;
+			position: relative;
+			background-origin: border-box;
+		}
+
+		.add{
+			color:#fffafa;
+			font-size:20px;
+			font-weight:1000;
+		}
+        .text{
+        	font-family:"楷体";
+            font-style: italic;
+            color:white;
+            margin-left:950px;
+            font-size:50px;
+            letter-spacing: 3px;
+        }
+        @keyframes bganimation {
+            0%{
+                background-position: 0% 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0% 50%;
+            }
+        }
+        .text1{
+            font-family:"楷体";
+            font-size:83px;
+            margin-top:50px;
+            margin-left:600px;
+            font-weight:bold;
+        }
+        .circle{
+            font-family:"楷体";
+        }
+    </style>
+	<!-- 鼠标点击效果 -->
+    <script src="https://blog-static.cnblogs.com/files/e-cat/cursor-effects.js"></script>
+
+    <!-- 页面点击小红心 -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-love109.cn@1.7/js/love.js"></script>
+    <!-- 鼠标点击烟花爆炸效果 -->
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;"></canvas>
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/TRHX/CDN-for-love109.cn@1.7/js/fireworks.js"></script>
+<body background="/static/img/c2.jpg" style=" background-repeat:no-repeat ;background-size:100% 100%;background-attachment: fixed;">
+    <div class="text1">
+        奶 茶 圈
+    </div>
+    <div class="text">
+       记录生活美好瞬间
+    </div>
+    <div class="circle">
+			<!--输入框-->
+			<div id="get">
+				<form action="/circle/friend" method="post">
+					<div class="add" >&nbsp&nbsp动态(留下您喜爱的奶茶，配料和qq，微信吧)</div>
+					<br>
+					<textarea name="saying"  cols="2"   rows="6"  style="OVERFLOW:   hidden" autocomplete="off" autofocus="autofocus" class="input"/></textarea>
+					<br><br>
+					<input type="submit" name="send" value="发表我的动态" class="inbutton"/>
+				</form>
+
+			</div>
+			<!--展示动态框-->
+			<section class="dynamic">
+				<ul  class="activity-list">
+					{% for i in all %}
+						{% if forloop.first%}
+								----------------------------------大 家 的 动 态：----------------------------------{% endif %}
+								<br><br>
+						<li class="each">
+							<div class="view" >
+								<u class="user1">用户</u>
+								<u class="user"> {{i.user}}：</u><br>
+								<br>
+								<div class="saying">&nbsp&nbsp&nbsp{{i.saying}}</div>
+								<br>
+								<div class="like">
+									<a href="/circle/friend/{{i.id}}" target=“_blank”>
+									<input type="button" value="点赞" class="buttonlike"/></a>
+									&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+									共有  {{i.like}}  人点赞该动态
+								</div>
+							</div>
+						</li>
+						  {% if forloop.last%}<br><br>
+								----------------------------------------到底啦--------------------------------------{% endif %}
+					{% empty %}
+						还没有动态，快去发表吧
+					{% endfor %}
+				</ul>
+			</section>
+
+    </div>
+	</body>
+</html>

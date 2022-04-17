@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>protein</title>
+
+		<style>
+		.box{
+
+			width: 700px;
+			height: 350px;
+			padding: 40px;
+			position: absolute;
+			background-color: rgba(180, 176, 176, 0.41);
+
+		}
+
+		.box input[type = "text"],.box select[type = "choice"]{
+			height: 60px;
+			width: 400px;
+			 font-size: 130%;
+			background: none;
+			display: block;
+			margin: 10px auto;
+			text-align: center;
+			border: 3px solid white;
+			padding: 4px 10px;
+			outline: none;
+			color: black;
+			border-radius: 24px;
+			transition: 0.05s;
+		}
+		p{
+			 font-size: 150%;
+			text-align: center;
+			color: #454242;
+			font-weight: 500;
+		}
+
+		.box input[type = "text"]:focus, .box select[type = "choice"]:focus{
+			height: 60px;
+			width: 600px;
+			border-color: #FFFFFF;
+		}
+		.box input[type = "submit"]{
+
+			font-size: 17px;
+			background: none;
+			display: block;
+			margin: 20px auto;
+			text-align: center;
+			border: 2px solid #FFFFFF;
+			padding: 14px 40px;
+			outline: none;
+			color: #ffffff;
+			border-radius: 24px;
+			transition: 0.25s;
+			cursor: pointer;
+			}
+		.box input[type = "submit"]:hover{
+			background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+			text-align: center;
+			 font-size: 150%;
+
+		}
+			.side
+			{
+				margin-top: 20px;
+			}
+
+			/* 主要的内容区域 */
+			.ingredients-box-wrap
+			{
+				height: 420px;
+				width: 720px;
+			}
+			.suggestion
+			{
+				margin-top: 50px;
+				margin-left: 50px;
+			}
+			.effect1{
+				text-shadow: 0 0 4px white,
+				0 -5px 4px #ff3,
+				2px -10px 6px #fd3,
+				-2px -15px 11px #f80,
+				2px -25px 18px #f20;
+			}
+			 .effect2 {
+				color: black;
+				text-shadow: -1px -1px white,
+			1px 1px #333;
+			}
+			 .effect3 {
+				color: #eeeeee;
+				text-shadow: 0 0 0.2em #F87,
+				0 0 0.2em #F87;
+			 }
+			 .advice
+			 {
+				 height: 200px;
+
+				 width: 800px;
+
+			 }
+
+			 .glass_size
+			 {
+
+				 height: 150px;
+				 width: 700px;
+				  margin-top: 0;
+				 margin-bottom: 90px;
+
+			 }
+			 .size1
+			 {
+				 height: 60px;
+
+				 width: 200px;
+				 box-shadow: 0 0 0 5px #ff9595;
+			 }
+			  .size2
+			 {
+				  margin-top: 50px;
+				 height: 60px;
+
+				 width: 200px;
+				 box-shadow: 0 0 0 5px #ff9595;
+			 }
+		</style>
+	</head>
+
+	<body background="/static/img/tt.png" style=" background-repeat:no-repeat ;background-size:100% 100%;
+background-attachment: fixed;">
+	<h3 align="center">{{message}}</h3>
+  			<div  align="center" class="side">
+				<!--选择配料1-->
+				<div class="ingredients-box-wrap">
+
+
+                        <form  class="box" method="POST" action="/protein">
+                            <h2 class="little-title">你喜欢的配料是</h2>
+							<select type="choice" id="data1" class="input-style" name="ingredients_choice">
+                                <option></option>
+			  					<option>芋圆</option>
+			  					<option>奥利奥</option>
+			  					<option>椰果</option>
+			 					<option>红豆</option>
+			  					<option>仙草</option>
+			  					<option>布丁</option>
+			  					<option>西米</option>
+			  					<option>珍珠</option>
+				  				<option>奶盖</option>
+				  				<option>花生麻薯</option>
+				  				<option>寒天</option>
+				  				<option>燕麦</option>
+				  				<option>咖啡冻</option>
+				  				<option>芋泥</option>
+				  				<option>芝麻芋圆</option>
+				  				<option>抹茶芋圆</option>
+				  				<option>布蕾</option>
+				  				<option>茶冻</option>
+				  				<option>椰子冻</option>
+				  				<option>熟糯米</option>
+				  				<option>薏仁</option>
+                            </select>
+                                <!--选择配料的数量-->
+
+                                <h2 class="little-title">请输入配料的数量（单位:克）</h2>
+
+                                <input type="text" id="data2" class="input-style" name="ingredients_quantity">
+                                <div align="center">
+                                    <input class="little-button" type="submit" value="提交" />
+                                </div>
+                        </form>
+
+				</div>
+            <div class="suggestion">
+				<div class="advice">
+					<h1 class="effect1">蛋白质含量:(单位g)</h1>
+					<h2 class="effect2">&nbsp&nbsp&nbsp&nbsp《福建卫生报》中指出：<br>
+					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp一个标准奶茶要求蛋白质含量不应少于0.5g/100g
+					</h2>
+				</div>
+				 <div class="glass_size">
+					 <div class="size1">
+						<h1 class="effect3">大杯（700ML）：</h1></div>
+					 	<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{big_sum}}</h1>
+						<h2>&nbsp&nbsp&nbsp&nbsp{{big_tip}}</h2>
+
+				 <div class="size2">
+					<h1  class="effect3">中杯（500ML）：</h1></div>
+					<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{mid_sum}}</h1>
+					<h2>&nbsp&nbsp&nbsp&nbsp{{mid_tip}}</h2>
+					<br><br>
+				</div>
+			</div>
+			</div>
+
+
+    </body>
+</html>

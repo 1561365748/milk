@@ -1,0 +1,105 @@
+/*轮播图*/
+/*设置背景*/
+.back{
+    position: relative;
+    margin-right: 1000px;
+    margin-left: 100px;
+    z-index:5;
+}
+/*logo*/
+.header-menu-logo
+{
+	z-index:7;
+	position:absolute;
+	margin-top: -250px;
+	margin-left: 300px;
+}
+/*设置图片盒子*/
+.content{
+    position: absolute;
+    width: 900px;
+    height:3000px;
+    margin-top:-70px ;
+    z-index:7;
+    margin-left: 500px;
+    margin-right: 700px;
+}
+/*卡路里*/
+.calory-wrap
+{
+    position: absolute;
+	margin-top:-300px;
+	margin-left: 750px;
+	z-index:7;
+}
+/*蛋白质*/
+.pot{
+    position: absolute;
+	margin-top:50px;
+	margin-left:-50px;
+}
+.pot img{
+    float:left;
+    width:295px;
+}
+
+/*碳水化合物*/
+.sweet{
+    position: absolute;
+	margin-top:50px;
+	margin-left: 350px;
+}
+.sweet img{
+    float:left;
+    width:295px;
+}
+
+/*推荐*/
+.best{
+    margin-top: 400px;
+	margin-left: 600px;
+	width:500px;
+	position:absolute;
+}
+.write{
+    margin-top: 300px;
+	margin-left: 350px;
+	position:absolute;
+}
+.writeimg{
+    width:295px;
+}
+/*设置奶茶圈盒子*/
+.circle{
+    position: absolute;
+	margin-top: 300px;
+	margin-left: -105px;
+	width:800px;
+}
+
+.like1{
+    position: absolute;
+	margin-top: 800px;
+	margin-left: -105px;
+	width:3100px;
+}
+.effect1{
+    margin-left: 400px;
+    text-shadow: 0 0 4px white,
+    0 -5px 4px #ff3,
+    2px -10px 6px #fd3,
+    -2px -15px 11px #f80,
+    2px -25px 18px #f20;
+}
+#back-to-top {
+            position:fixed;
+            right:50px;
+            z-index:9;
+            width:70px;
+            height:900px;
+            background:url('/Content/Images/scroll.png');
+            transition:0.5s;
+            cursor:pointer;
+}
+
+
