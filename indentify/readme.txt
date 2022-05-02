@@ -1,21 +1,21 @@
-/indentify:.  //ʵ��ʶ��С�ϵĹ���
-��  admin.py  //�����Զ���django�����ߣ��˴�Ϊ��
-��  apps.py   //������Ӧ��indentify������
-��  models.py //Ӧ��indentify����������,�˴�Ϊ��
-��  readme.txt
-��  tests.py  //���ļ��п��Ա�д�����ĵ���������������Ӧ�ã��˴�Ϊ�ա�
-��  urls.py  //����������������views.py�е��½��ķ�����indentify��
-��  views.py //������Ӧ��������ĺ�����ʵ��ʶ��С�ϵĹ��ܡ�
-��  __init__.py
-��  
-����migrations   //����calorieӦ��ʱ�Զ�����
-��  ��  grey1.png
-��  ��  __init__.py
-��  ��  
-��  ����__pycache__
-��          __init__.cpython-38.pyc
-��          
-����__pycache__   //������Զ�����
+/indentify:.  //实现识别小料的功能
+│  admin.py  //可以自定义django管理工具，此处为空
+│  apps.py   //包含对应用indentify的配置
+│  models.py //应用indentify的数据类型,此处为空
+│  readme.txt
+│  tests.py  //该文件中可以编写测试文档来测试所建立的应用，此处为空。
+│  urls.py  //用来声明并调用在views.py中的新建的方法（indentify）
+│  views.py //保存响应各种请求的函数，实现识别小料的功能。
+│  __init__.py
+│  
+├─migrations   //创建calorie应用时自动创建
+│  │  grey1.png
+│  │  __init__.py
+│  │  
+│  └─__pycache__
+│          __init__.cpython-38.pyc
+│          
+└─__pycache__   //编译后自动创建
         admin.cpython-38.pyc
         apps.cpython-38.pyc
         models.cpython-38.pyc
@@ -23,3 +23,4 @@
         views.cpython-38.pyc
         __init__.cpython-38.pyc
         
+
